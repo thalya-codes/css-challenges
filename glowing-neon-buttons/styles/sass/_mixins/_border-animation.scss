@@ -1,0 +1,50 @@
+// TODO: Refatorar props da animação
+@mixin border-animation($color, $animation-name) {
+  
+  @keyframes #{$animation-name} {
+    0% { 
+      border: {
+        top:  1px solid $color;
+        bottom: 1px solid transparent;
+        left: 1px solid transparent;
+        right: 1px solid transparent;
+      }; 
+      
+    }
+
+    25%   { 
+      border: {
+        top: 1px solid transparent;
+        bottom: 1px solid transparent;
+        left: 1px solid transparent;
+        right:  1px solid $color;
+      }; 
+    }
+
+    50%   { 
+      border: {
+        top: 1px solid transparent;
+        bottom: 1px solid $color;
+        left: 1px solid transparent;
+        right: 1px solid transparent;
+      };  
+     }
+
+    75%   { 
+      border: {
+        top: 1px solid transparent;
+        bottom: 1px solid transparent;
+        left: 1px solid $color;
+        right:  1px solid transparent;
+      };  
+     }
+
+    100%  { 
+      border: {
+        top: 1px solid $color;
+      }; 
+    }
+  } 
+  
+  animation: $animation-name .4s infinite;
+}

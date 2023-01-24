@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+@import './_variables/_colors';
+@import './_mixins/_hover-effect.scss';
+@import './_mixins/border-animation';
+
+body {
+  background-color: rgb(47, 47, 47);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  border: none;
+  background: transparent;
+  padding: 15px;   
+
+  &--green {
+    color: $neon-green;
+
+    @include border-animation($neon-green, green-border);
+    @include hover-effect($neon-green);
+  }
+
+  &--pink{
+    color: $neon-pink;
+
+    @include border-animation($neon-pink,  pink-border);
+    @include hover-effect($neon-pink);
+  }
+
+  &--light-blue {
+    color: $neon-light-blue;
+
+    @include border-animation($neon-light-blue, blue-border);
+    @include hover-effect($neon-light-blue);
+  }
+}

@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
+body {
+  background-color: #2f2f2f;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  background: transparent;
+  padding: 15px;
+}
+
+.button--green {
+  color: #39FF14;
+  animation: green-border 0.4s infinite;
+}
+
+@keyframes green-border {
+  0% {
+    border-top: 1px solid #39FF14;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  25% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid #39FF14;
+  }
+  50% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #39FF14;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  75% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #39FF14;
+    border-right: 1px solid transparent;
+  }
+  100% {
+    border-top: 1px solid #39FF14;
+  }
+}
+
+.button--green:hover {
+  background-color: #39FF14;
+  color: #000;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 5px -5px 50px #39FF14;
+}
+
+.button--pink {
+  color: #ff93df;
+  animation: pink-border 0.4s infinite;
+}
+
+@keyframes pink-border {
+  0% {
+    border-top: 1px solid #ff93df;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  25% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid #ff93df;
+  }
+  50% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #ff93df;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  75% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #ff93df;
+    border-right: 1px solid transparent;
+  }
+  100% {
+    border-top: 1px solid #ff93df;
+  }
+}
+
+.button--pink:hover {
+  background-color: #ff93df;
+  color: #000;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 5px -5px 50px #ff93df;
+}
+
+.button--light-blue {
+  color: #40f2fe;
+  animation: blue-border 0.4s infinite;
+}
+
+@keyframes blue-border {
+  0% {
+    border-top: 1px solid #40f2fe;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  25% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid #40f2fe;
+  }
+  50% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #40f2fe;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  75% {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #40f2fe;
+    border-right: 1px solid transparent;
+  }
+  100% {
+    border-top: 1px solid #40f2fe;
+  }
+}
+
+.button--light-blue:hover {
+  background-color: #40f2fe;
+  color: #000;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 5px -5px 50px #40f2fe;
+}

@@ -1,0 +1,13 @@
+@import './neon-shadow';
+
+@mixin hover-effect($color) {
+  &:hover {
+    background-color: $color;
+    color: #000;
+    transition: .5s ease-in-out;
+    
+    cursor: pointer;
+
+    @include neon-shadow($color);    
+  }
+}
