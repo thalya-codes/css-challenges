@@ -15,8 +15,12 @@ body {
 
 .container {
   width: 80%;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .button-container {
