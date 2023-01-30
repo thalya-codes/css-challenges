@@ -1,0 +1,3 @@
+@mixin gradient-generator($deg-value, $color) {
+  background: linear-gradient($deg-value, transparent, $color , transparent);
+}

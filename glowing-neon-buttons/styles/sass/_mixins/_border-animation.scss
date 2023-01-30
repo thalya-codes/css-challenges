@@ -1,50 +1,59 @@
-// TODO: Refatorar props da animação
-@mixin border-animation($color, $animation-name) {
+
+@mixin border-animation($color, $animation-name,$direction) {
   
   @keyframes #{$animation-name} {
-    0% { 
-      border: {
-        top:  1px solid $color;
-        bottom: 1px solid transparent;
-        left: 1px solid transparent;
-        right: 1px solid transparent;
-      }; 
-      
+    0% {
+      @if $direction == 'top' {
+        width: 0%;
+      }
+
+      @if $direction == 'right' {
+        height: 0%;
+      }   
+
+      @if $direction == 'bottom' {
+        width: 0%;
+      }
+
+      @if $direction == 'left' {
+        height: 0%;
+      }   
     }
 
-    25%   { 
-      border: {
-        top: 1px solid transparent;
-        bottom: 1px solid transparent;
-        left: 1px solid transparent;
-        right:  1px solid $color;
-      }; 
+    50%, 100% {
+      @if $direction == 'top' {
+        width: 100%;
+      }
+
+      @if $direction == 'right' {
+        height: 100%;
+      } 
+
+      @if $direction == 'bottom' {
+        width: 100%;
+      }
+
+      @if $direction == 'left' {
+        height: 100%;
+      } 
     }
+  }
 
-    50%   { 
-      border: {
-        top: 1px solid transparent;
-        bottom: 1px solid $color;
-        left: 1px solid transparent;
-        right: 1px solid transparent;
-      };  
-     }
+  animation: $animation-name 1s linear infinite;
 
-    75%   { 
-      border: {
-        top: 1px solid transparent;
-        bottom: 1px solid transparent;
-        left: 1px solid $color;
-        right:  1px solid transparent;
-      };  
-     }
+  @if($direction == 'top') {
+    animation-delay: initial;
+  }
 
-    100%  { 
-      border: {
-        top: 1px solid $color;
-      }; 
-    }
-  } 
+  @if($direction == 'right') {
+    animation-delay: 0.25s;
+  }
   
-  animation: $animation-name .4s infinite;
+  @if($direction == 'bottom') {
+    animation-delay: 0.10s;
+  }
+
+  @if($direction == 'left') {
+    animation-delay: .55s;
+  }  
 }
