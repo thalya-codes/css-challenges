@@ -12,6 +12,26 @@ button, input {
   border: none;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.moving-to-right {
+  transform: translate(450px);
+}
+
+.moving-to-left {
+  transform: translate(-450px);
+}
+
+.moving-to-start {
+  transform: translate(0);
+}
+
 body {
   width: 100vw;
   min-height: 100vh;
@@ -20,7 +40,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-body .container {
+
+body, button, input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
   display: flex;
   width: 90%;
   min-height: 70vh;
@@ -32,59 +57,47 @@ body .container {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body .container__section-divider {
+.container__section-divider {
   margin: 0px 30px 0 60px;
   border-color: rgba(230, 230, 230, 0.3882352941);
 }
-
-body, button, input {
-  font-family: "Poppins", sans-serif;
+.container #greetings-container, .container #forms-container {
+  transition: all 2s ease-in-out;
 }
-
-.moving-to-right {
-  transform: translate(450px);
-  transition: transform 2s ease-in-out;
-}
-
-.moving-to-left {
-  transform: translate(-450px);
-  transition: transform 2s ease-in-out;
-}
-
-.neumorphism-form {
-  min-height: 300px;
+.container #greetings-container {
+  width: 45%;
   display: flex;
+}
+.container #greetings-container .neumorphism-form__title {
+  margin-bottom: 24px;
+}
+.container #greetings-container .neumorphism-form__button {
+  margin-top: 50px;
+}
+.container #forms-container {
+  width: 55%;
+}
+.container #forms-container .neumorphism-form__button {
+  margin-top: 20px;
+}
+.container .neumorphism-form {
+  min-height: 300px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
 }
-.neumorphism-form--account-greeting {
-  width: 45%;
-}
-.neumorphism-form--account-greeting .neumorphism-form__title {
-  margin-bottom: 24px;
-}
-.neumorphism-form--account-greeting .neumorphism-form__button {
-  margin-top: 50px;
-}
-.neumorphism-form--account-form {
-  width: 55%;
-}
-.neumorphism-form--account-form .neumorphism-form__button {
-  margin-top: 30px;
-}
-.neumorphism-form__title {
+.container .neumorphism-form__title {
   font-size: 38px;
 }
-.neumorphism-form__subtitle {
+.container .neumorphism-form__subtitle {
   width: 92%;
   font-size: 14px;
   font-weight: 400;
   color: #5b5151;
   text-align: center;
 }
-.neumorphism-form__button {
+.container .neumorphism-form__button {
   width: 160px;
   padding: 15px;
   border-radius: 30px;
@@ -97,22 +110,22 @@ body, button, input {
   transition: background-color 1s ease-in-out;
   align-self: center;
 }
-.neumorphism-form__button:hover {
+.container .neumorphism-form__button:hover {
   cursor: pointer;
   background-color: #688cf5;
   transition: background-color 1s ease-in-out;
 }
-.neumorphism-form .social-media-list {
+.container .neumorphism-form .social-media-list {
   display: flex;
   gap: 10px;
   width: 30%;
   margin-top: 20px;
 }
-.neumorphism-form .social-media-list__item {
+.container .neumorphism-form .social-media-list__item {
   width: 30px;
   margin-bottom: 20px;
 }
-.neumorphism-form .social-media-list__item .social-media-list__button {
+.container .neumorphism-form .social-media-list__item .social-media-list__button {
   width: 30px;
   height: 30px;
   opacity: 0.5;
@@ -122,24 +135,24 @@ body, button, input {
   background-size: contain;
   transition: opacity 1s ease-in-out;
 }
-.neumorphism-form .social-media-list__item .social-media-list__button--facebook {
+.container .neumorphism-form .social-media-list__item .social-media-list__button--facebook {
   margin-left: 8px;
   background-image: url("../../svg/facebook.svg");
 }
-.neumorphism-form .social-media-list__item .social-media-list__button--linkedin {
+.container .neumorphism-form .social-media-list__item .social-media-list__button--linkedin {
   margin-left: 6px;
   background-image: url("../../svg/linkedin.svg");
 }
-.neumorphism-form .social-media-list__item .social-media-list__button--twitter {
+.container .neumorphism-form .social-media-list__item .social-media-list__button--twitter {
   margin-left: 5px;
   background-image: url("../../svg/twitter.svg");
 }
-.neumorphism-form .social-media-list__item .social-media-list__button:hover {
+.container .neumorphism-form .social-media-list__item .social-media-list__button:hover {
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.5s ease-in-out;
 }
-.neumorphism-form .form {
+.container .neumorphism-form .form {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -147,7 +160,7 @@ body, button, input {
   width: 75%;
   margin-top: 15px;
 }
-.neumorphism-form .form__field {
+.container .neumorphism-form .form__field {
   width: 100%;
   border-radius: 10px;
   box-shadow: inset 4px 4px 1em rgba(204, 204, 204, 0.3058823529), -4px -4px 1em rgba(212, 196, 196, 0.6352941176);
@@ -155,6 +168,16 @@ body, button, input {
   font-size: 14px;
   font-weight: 400;
 }
-.neumorphism-form .form__field:focus {
+.container .neumorphism-form .form__field:focus {
   outline: #4b70e2 solid 2px;
+}
+.container .neumorphism-form .form__button--forgot-password {
+  align-self: center;
+  margin-top: 20px;
+  border-bottom: 2px solid rgba(170, 169, 169, 0.6941176471);
+  padding-bottom: 5px;
+}
+.container .neumorphism-form .form__button--forgot-password:hover {
+  cursor: pointer;
+  color: rgba(125, 125, 125, 0.9960784314);
 }

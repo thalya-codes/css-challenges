@@ -1,0 +1,19 @@
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.moving-to-right {
+  transform: translate(450px);  
+}
+
+.moving-to-left {
+  transform: translate(-450px);
+}
+
+.moving-to-start {
+  transform: translate(0);
+}

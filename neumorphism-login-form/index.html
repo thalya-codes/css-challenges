@@ -8,62 +8,120 @@
   <title>Neumorphism Login and Sign Up</title>
 </head>
 <body>
-  <main>
+  <main class="main">
     <div class="container">
-      <section 
-        id="neumorphism-form--section-greeting" 
-        class="neumorphism-form neumorphism-form--account-greeting" 
-      >
-        <h2 class="neumorphism-form__title">Welcome Back !</h2>
+      <section id="greetings-container">
+        <div
+          id="neumorphism-form--welcome-back" 
+          class="neumorphism-form d-flex"
+        >
+          <h2 class="neumorphism-form__title">Welcome Back !</h2>
   
-        <h3 class="neumorphism-form__subtitle">
-          To keep connected with us please login with your
-          personal info
-        </h3>
-  
-        <button class="neumorphism-form__button">Sign In</button>
-      </section>
-  
-      <hr class="container__section-divider">
-  
-      <section 
-        id="neumorphism-form--section-form" 
-        class="neumorphism-form neumorphism-form--account-form"
-      >
-        <h1 class="neumorphism-form__title">Create Account</h1>
-  
-        <ul class="social-media-list">
-          <li class="social-media-list__item">
-            <button             
-              class="social-media-list__button social-media-list__button--facebook" 
-              aria-describedby="Create account with Facebook"
-            ></button>
-          </li>
-  
-          <li class="social-media-list__item">
-            <button 
-              class="social-media-list__button social-media-list__button--linkedin"
-              aria-describedby="Create account with LinkendIn"
-            ></button>
-          </li>
-  
-          <li class="social-media-list__item">
-            <button
-              class="social-media-list__button social-media-list__button--twitter"
-              aria-describedby="Create account with Twitter"
-            ></button>
-          </li>
-        </ul>
-  
-        <h3 class="neumorphism-form__subtitle">or use email for registration</h3>
+          <h3 class="neumorphism-form__subtitle">
+            To keep connected with us please login with your
+            personal info
+          </h3>
+    
+          <button class="neumorphism-form__button">Sign In</button>
+        </div>
 
-        <form id="form--create-account" class="form">
-          <input type="text" class="form__field" placeholder="Name">
-          <input type="email" class="form__field" placeholder="Email">
-          <input type="password" class="form__field" placeholder="******">
-          <button type="submit" class="neumorphism-form__button">Sign Up</button>
-        </form>
-      </section>    
+        <div 
+          id="neumorphism-form--hello-friend "
+          class="neumorphism-form d-none"
+        >
+          <h2 class="neumorphism-form__title">Hello Friend !</h2>
+  
+          <h3 class="neumorphism-form__subtitle">
+            Enter your personal details and start 
+            journey with us
+          </h3>
+    
+          <button class="neumorphism-form__button">Sign Up</button>
+        </div>
+      </section>
+      
+      <hr class="container__section-divider">
+        
+      <section id="forms-container">
+        <div 
+          id="neumorphism-form--create-account" 
+          class="neumorphism-form d-flex"
+        >
+          <h1 class="neumorphism-form__title">Create Account</h1>
+    
+          <ul class="social-media-list">
+            <li class="social-media-list__item">
+              <button             
+                class="social-media-list__button social-media-list__button--facebook" 
+                aria-describedby="Create account with Facebook"
+              ></button>
+            </li>
+    
+            <li class="social-media-list__item">
+              <button 
+                class="social-media-list__button social-media-list__button--linkedin"
+                aria-describedby="Create account with LinkendIn"
+              ></button>
+            </li>
+    
+            <li class="social-media-list__item">
+              <button
+                class="social-media-list__button social-media-list__button--twitter"
+                aria-describedby="Create account with Twitter"
+              ></button>
+            </li>
+          </ul>
+    
+          <h3 class="neumorphism-form__subtitle">or use email for registration</h3>
+  
+          <form id="form--create-account" class="form">
+            <input type="text" class="form__field" placeholder="Name">
+            <input type="email" class="form__field" placeholder="Email">
+            <input type="password" class="form__field" placeholder="******">
+            <button type="submit" class="neumorphism-form__button">Sign Up</button>
+          </form>
+        </div>   
+
+        <div 
+          id="neumorphism-form--login" 
+          class="neumorphism-form d-none"
+        >
+          <h1 class="neumorphism-form__title">Sign In to Website</h1>
+    
+          <ul class="social-media-list">
+            <li class="social-media-list__item">
+              <button             
+                class="social-media-list__button social-media-list__button--facebook" 
+                aria-describedby="Login in with Facebook"
+              ></button>
+            </li>
+    
+            <li class="social-media-list__item">
+              <button 
+                class="social-media-list__button social-media-list__button--linkedin"
+                aria-describedby="Login in with LinkendIn"
+              ></button>
+            </li>
+    
+            <li class="social-media-list__item">
+              <button
+                class="social-media-list__button social-media-list__button--twitter"
+                aria-describedby="Login in with Twitter"
+              ></button>
+            </li>
+          </ul>
+    
+          <h3 class="neumorphism-form__subtitle">or use email account</h3>
+
+          <form id="form--login" class="form">
+            <input type="email" class="form__field" placeholder="Email">
+            <input type="password" class="form__field" placeholder="******">
+            
+            <button type="button" class="form__button--forgot-password">Forgot your password?</button>
+            <button type="submit" class="neumorphism-form__button">Sign In</button>
+          </form>
+        </div>          
+      </section>      
     </div>
   </main>
 </body>
