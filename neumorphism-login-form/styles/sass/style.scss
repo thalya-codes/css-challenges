@@ -1,176 +1,181 @@
-@import "./globals/global";
+@import "./utility/utility";
 
-.container {
-  display: flex;
-  width: 90%;
-  min-height: 70vh;
-  
-  padding: 50px;
+body {
+  flex-direction: column;
 
-  background: rgba( 255, 255, 255, 0.25 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
-  border-radius: 10px;
-  
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-  &__section-divider {
-    margin: 0px 30px 0 60px;
-    border-color: #e6e6e663;
-  } 
-
-  #greetings-container, #forms-container {
-    transition: all 2s ease-in-out;
-  }
-
-  #greetings-container {
-    width: 45%;
+  .container {
     display: flex;
-
-    .neumorphism-form__title {
-      margin-bottom: 24px;
-    }
-
-    .neumorphism-form__button {
-      margin-top: 50px;
-    }
-  }
-
-  #forms-container {
-    width: 55%;
+    width: 90%;
+    min-height: 70vh;
     
-    .neumorphism-form__button {
-      margin-top: 20px;
-    }
-  }
-
-  .neumorphism-form {
-    min-height: 300px;
+    padding: 50px;
   
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
     
-    background-color: #ffff;
- 
-    &__title {
-      font-size: 38px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  
+    &__section-divider {
+      margin: 0px 30px 0 60px;
+      border-color: #e6e6e663;
+    } 
+  
+    #greetings-container, #forms-container {
+      transition: all 2s ease-in-out;
     }
   
-    &__subtitle {
-      width: 92%;
-      font-size: 14px;
-      font-weight: 400;
-      color: #5b5151;
-      text-align: center;
-    }
+    #greetings-container {
+      width: 45%;
+      display: flex;
   
-    &__button {
-      width: 160px;   
-      padding: 15px;
-      border-radius: 30px;
+      .neumorphism-form__title {
+        margin-bottom: 24px;
+      }
   
-      font-weight: 500;
-      text-transform: uppercase;
-      text-align: center;
-      letter-spacing: 1px;
-      color: #fff;
-  
-      background-color: #4b70e2;
-      transition: background-color 1s ease-in-out;
-  
-      align-self: center;
-  
-      &:hover {
-        cursor: pointer;
-        background-color: #688cf5;
-        transition: background-color 1s ease-in-out;
+      .neumorphism-form__button {
+        margin-top: 50px;
       }
     }
   
-    .social-media-list {
-      display: flex;
-      gap: 10px;
-  
-      width: 30%;
-      margin-top: 20px;
-  
-      &__item {
-        width: 30px;
-        margin-bottom: 20px;   
-        
-        .social-media-list__button {
-          width: 30px;
-          height: 30px;
-          opacity: 0.5;
-    
-          box-sizing: border-box;
-          text-align: center;
-    
-          background-repeat: no-repeat;
-          background-size: contain;  
-          transition: opacity 1s ease-in-out;
-  
-          &--facebook {
-            margin-left: 8px;
-            background-image: url('../../svg/facebook.svg');            
-          }
-    
-          &--linkedin {
-            margin-left: 6px;
-            background-image: url('../../svg/linkedin.svg');
-          }
-    
-          &--twitter {
-            margin-left: 5px;
-            background-image: url('../../svg/twitter.svg');
-          }
-    
-          &:hover {
-            cursor: pointer;   
-            opacity: .7;
-            transition: opacity .5s ease-in-out;
-          }
-        }
-      }
-    }
-  
-    .form {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      gap: 20px;
-  
-      width: 75%;
-      margin-top: 15px;
+    #forms-container {
+      width: 55%;
       
-      &__field {
-        width: 100%;
-        
-        border-radius: 10px;
-        box-shadow: inset 4px 4px 1em #cccccc4e,  -4px -4px 1em #d4c4c4a2;
-        padding: 15px 20px;
+      .neumorphism-form__button {
+        margin-top: 20px;
+      }
+    }
   
+    .neumorphism-form {
+      min-height: 300px;
+    
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      background-color: #ffff;
+   
+      &__title {
+        font-size: 38px;
+      }
+    
+      &__subtitle {
+        width: 92%;
         font-size: 14px;
         font-weight: 400;
-  
-        &:focus {
-          outline: #4b70e2 solid 2px;
-        }
+        color: #5b5151;
+        text-align: center;
       }
-
-      &__button--forgot-password{
+    
+      &__button {
+        width: 160px;   
+        padding: 15px;
+        border-radius: 30px;
+    
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #fff;
+    
+        background-color: #4b70e2;
+        transition: background-color 1s ease-in-out;
+    
         align-self: center;
-        margin-top: 20px;
-        border-bottom: 2px solid #aaa9a9b1;
-        padding-bottom: 5px;
-
+    
         &:hover {
           cursor: pointer;
-          color: #7d7d7dfe;
+          background-color: #688cf5;
+          transition: background-color 1s ease-in-out;
         }
       }
-    }
-  }    
+    
+      .social-media-list {
+        display: flex;
+        gap: 10px;
+    
+        width: 30%;
+        margin-top: 20px;
+    
+        &__item {
+          width: 30px;
+          margin-bottom: 20px;   
+          
+          .social-media-list__button {
+            width: 30px;
+            height: 30px;
+            opacity: 0.5;
+      
+            box-sizing: border-box;
+            text-align: center;
+            
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: contain;  
+            transition: opacity 1s ease-in-out;            
+    
+            &--facebook {
+              margin-left: 8px;
+              background-image: url('../../svg/facebook.svg');            
+            }
+      
+            &--linkedin {
+              margin-left: 6px;
+              background-image: url('../../svg/linkedin.svg');
+            }
+      
+            &--twitter {
+              margin-left: 5px;
+              background-image: url('../../svg/twitter.svg');
+            }
+      
+            &:hover {
+              cursor: pointer;   
+              opacity: .7;
+              transition: opacity .5s ease-in-out;
+            }
+          }
+        }
+      }
+    
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    
+        width: 75%;
+        margin-top: 15px;
+        
+        &__field {
+          width: 100%;
+          
+          border-radius: 10px;
+          box-shadow: inset 4px 4px 1em #cccccc4e,  -4px -4px 1em #d4c4c4a2;
+          padding: 15px 20px;
+    
+          font-size: 14px;
+          font-weight: 400;
+    
+          &:focus {
+            outline: #4b70e2 solid 2px;
+          }
+        }
+  
+        &__button--forgot-password{
+          align-self: center;
+          margin-top: 20px;
+          border-bottom: 2px solid #aaa9a9b1;
+          padding-bottom: 5px;
+  
+          &:hover {
+            cursor: pointer;
+            color: #7d7d7dfe;
+          }
+        }
+      }
+    }    
+  }
 }
